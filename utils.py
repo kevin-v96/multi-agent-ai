@@ -1,6 +1,10 @@
 def get_openai_api_key() -> str:
-    return "your-openai-api-key"
+    return ""
 
 
 def get_weather_api_key() -> str:
-    return "your-weather-api-key"
+    return ""
+
+
+def get_serper_api_key() -> str:
+    return ""
