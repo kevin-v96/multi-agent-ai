@@ -13,6 +13,9 @@ pre-commit = "^3.7.1"
 pytest = "^8.3.2"
 requests = "^2.32.3"
 pydantic = "^2.8.2"
+crewai-tools = { version = "^0.4.26", python = ">=3.12,<=3.13" }
+crewai = { version = "^0.41.1", python = ">=3.12,<=3.13" }
+langchain-community = "^0.2.10"
 
 [build-system]
 requires = ["poetry-core"]
