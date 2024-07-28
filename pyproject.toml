@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "multi-agent-ai"
+version = "0.1.0"
+description = "Some experiments with multi-agent AI using LangGraph, AutoGen, and CrewAI"
+authors = ["kevin-v96 <kevinvegda@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "^3.0.3"
+pyautogen = { version = "^0.2.32", python = ">=3.12,<3.13" }
+pre-commit = "^3.7.1"
+pytest = "^8.3.2"
+requests = "^2.32.3"
+pydantic = "^2.8.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
