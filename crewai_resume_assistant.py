@@ -4,8 +4,8 @@ from utils import get_openai_api_key, get_serper_api_key
 from crewai_tools import FileReadTool, ScrapeWebsiteTool, MDXSearchTool, SerperDevTool
 
 # bookkeeping
-openai_api_key = get_openai_api_key()
-os.environ["OPENAI_MODEL_NAME"] = "gpt-3.5-turbo"
+os.environ["OPENAI_API_KEY"] = get_openai_api_key()
+os.environ["OPENAI_MODEL_NAME"] = "gpt-4o"
 os.environ["SERPER_API_KEY"] = get_serper_api_key()
 
 # import all the tools we'll need for this
@@ -167,16 +167,26 @@ job_application_crew = Crew(
 
 # Running the crew
 job_application_inputs = {
-    "job_posting_url": "https://jobs.lever.co/AIFund/6c82e23e-d954-4dd8-a734-c0c2c5ee00f1?lever-origin=applied&lever-source%5B%5D=AI+Fund",
-    "github_url": "https://github.com/joaomdmoura",
-    "personal_writeup": """Noah is an accomplished Software
-    Engineering Leader with 18 years of experience, specializing in
-    managing remote and in-office teams, and expert in multiple
-    programming languages and frameworks. He holds an MBA and a strong
-    background in AI and data science. Noah has successfully led
-    major tech initiatives and startups, proving his ability to drive
-    innovation and growth in the tech industry. Ideal for leadership
-    roles that require a strategic and innovative approach.""",
+    "job_posting_url": "https://depopcareers.com/careers/JR3536",
+    "github_url": "https://github.com/kevin-v96",
+    "personal_writeup": """Dear Hiring Manager,
+I am excited to apply for the role of Data Scientist at *COMPANY NAME*. With a Master's degree in Data Science and two years of prior experience as a Product Engineer, I am confident that my skills and experience make me a perfect fit for this position.
+
+As a Product Engineer, I have gained experience in developing interactive and user-friendly web applications. During my time working with React, I learned the importance of data visualisation and the role it plays in communicating complex information to users. This experience has given me a unique perspective on the importance of data and its analysis, which I am eager to bring to my work as a Data Scientist.
+
+Throughout my Master's program, I have gained hands-on experience in data analysis, machine learning, and statistical modelling. I am proficient in Python and R, and have worked on projects involving data manipulation, cleaning, and visualisation using libraries such as Pandas, NumPy, and Matplotlib. In addition, I have experience working with SQL databases and have developed skills in using tools like Tableau and Excel for data analysis, visualisation and reporting.
+
+My passion for AI and my experience as a frontend developer has given me a unique perspective on the role of data in user-centric applications. I am committed to using data to drive informed decisions and to provide the best possible user experience. I am also a team player and have excellent communication skills, which I believe are essential for any Data Scientist working in a collaborative and interdisciplinary environment.
+
+I also have had the experience of working as an Intern Machine Learning Engineer at Flagright, a YC startup that tackles financial Fraud and AML. There, I helped set up their ML pipeline, including MLOps and its different steps on various platforms.
+
+My Masters thesis and final project were on abstractive summarisation using SOTA LM models like LSTMs and Transformers. As such, I have a keen interest in LLMs and their usage. I also have certification as an AWS Solutions Architect and an Azure Data Scientist Associate.
+
+I am excited about the opportunity to bring my skills and experience to *COMPANY NAME* and to make a meaningful contribution to your team. I look forward to the opportunity to further discuss my qualifications with you.
+
+Sincerely,
+Kevin Vegda
+""",
 }
 
 ### this execution will take a few minutes to run
